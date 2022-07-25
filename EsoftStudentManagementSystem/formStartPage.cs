@@ -110,6 +110,7 @@ namespace ESOFT_STMS
             {
                 try
                 {
+                    string ID = "";
                     string firstName = textBoxFirstName.Text;
                     string lastName = textBoxLastName.Text;
                     string dateOfBirth = dateTimePickerDOB.Text;
@@ -129,8 +130,8 @@ namespace ESOFT_STMS
                     if (radioButtonStudent.Checked)
                     {
                         con = new SqlConnection(DBHelper.getConnectionString());
-                        string query = "SELECT * FROM StudentSignupInfo WHERE Email='" + textBoxEmail.Text + "'";
-                        SqlDataAdapter sda = new SqlDataAdapter(query, con);
+                        string queryAuthentication = "SELECT * FROM StudentSignupInfo WHERE Email='" + textBoxEmail.Text + "'";
+                        SqlDataAdapter sda = new SqlDataAdapter(queryAuthentication, con);
                         DataTable dataTable1 = new DataTable();
                         sda.Fill(dataTable1);
 
@@ -143,8 +144,21 @@ namespace ESOFT_STMS
                         else
                         {
                             con.Open();
-                            cmd = new SqlCommand("INSERT INTO StudentSignupInfo (FirstName,LastName,DOB,Mobile,Gender,Email,Password) VALUES('" + firstName + "', '" + lastName + "', '" + dateOfBirth + "', '" + mobileNo + "', '" + gender + "', '" + email + "', '" + password + "')", con);
+                            string queryIdCheck = "SELECT TOP 1 StudentID FROM StudentSignupInfo ORDER BY StudentID DESC";
+                            SqlCommand cmnd = new SqlCommand(queryIdCheck, con);
+                            SqlDataReader read = cmnd.ExecuteReader();
+
+                            ID = "ES/" + DateTime.Now.Year.ToString() + "/0001";
+                            while (read.Read())
+                            {
+                                int studentIDNumber = Int32.Parse(read[0].ToString().Substring(8, 4)) + 1;
+                                ID = "ES/" + DateTime.Now.Year.ToString() + "/" + studentIDNumber.ToString().PadLeft(4, '0');
+                            }
+                            con.Close();
+                            con.Open();
+                            cmd = new SqlCommand("INSERT INTO StudentSignupInfo (StudentID,FirstName,LastName,DOB,Mobile,Gender,Email,Password) VALUES('" + ID + "', '" + firstName + "', '" + lastName + "', '" + dateOfBirth + "', '" + mobileNo + "', '" + gender + "', '" + email + "', '" + password + "')", con);
                             cmd.ExecuteNonQuery();
+
                             if (MessageBox.Show("Account Created Successfully. Continue to your account?", "Congratulations", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                             {
                                 formLoginPage loginpage = new formLoginPage();
@@ -166,8 +180,8 @@ namespace ESOFT_STMS
                     else if (radioButtonTeacher.Checked)
                     {
                         con = new SqlConnection(DBHelper.getConnectionString());
-                        string query = "SELECT * FROM TeacherSignupInfo WHERE Email='" + textBoxEmail.Text + "'";
-                        SqlDataAdapter sda = new SqlDataAdapter(query, con);
+                        string queryAuthentication = "SELECT * FROM TeacherSignupInfo WHERE Email='" + textBoxEmail.Text + "'";
+                        SqlDataAdapter sda = new SqlDataAdapter(queryAuthentication, con);
                         DataTable dataTable1 = new DataTable();
                         sda.Fill(dataTable1);
 
@@ -180,7 +194,20 @@ namespace ESOFT_STMS
                         else
                         {
                             con.Open();
-                            cmd = new SqlCommand("INSERT INTO TeacherSignupInfo (FirstName,LastName,DOB,Mobile,Gender,Email,Password) VALUES('" + firstName + "', '" + lastName + "', '" + dateOfBirth + "', '" + mobileNo + "', '" + gender + "', '" + email + "', '" + password + "')", con);
+                            string queryIdCheck = "SELECT TOP 1 TeacherID FROM TeacherSignupInfo ORDER BY TeacherID DESC";
+                            SqlCommand cmnd = new SqlCommand(queryIdCheck, con);
+                            SqlDataReader read = cmnd.ExecuteReader();
+
+                            ID = "ET/" + DateTime.Now.Year.ToString() + "/0001";
+                            while (read.Read())
+                            {
+                                int teacherIDNumber = Int32.Parse(read[0].ToString().Substring(8, 4)) + 1;
+                                ID = "ET/" + DateTime.Now.Year.ToString() + "/" + teacherIDNumber.ToString().PadLeft(4, '0');
+                            }
+                            con.Close();
+
+                            con.Open();
+                            cmd = new SqlCommand("INSERT INTO TeacherSignupInfo (TeacherID,FirstName,LastName,DOB,Mobile,Gender,Email,Password) VALUES('" + ID + "', '" + firstName + "', '" + lastName + "', '" + dateOfBirth + "', '" + mobileNo + "', '" + gender + "', '" + email + "', '" + password + "')", con);
                             cmd.ExecuteNonQuery();
                             if (MessageBox.Show("Account Created Successfully. Continue to your account?", "Congratulations", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                             {
