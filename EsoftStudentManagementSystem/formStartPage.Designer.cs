@@ -447,12 +447,12 @@
             this.dateTimePickerDOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerDOB.Location = new System.Drawing.Point(743, 269);
             this.dateTimePickerDOB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePickerDOB.MaxDate = new System.DateTime(2002, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerDOB.MaxDate = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerDOB.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerDOB.Name = "dateTimePickerDOB";
             this.dateTimePickerDOB.Size = new System.Drawing.Size(288, 36);
             this.dateTimePickerDOB.TabIndex = 35;
-            this.dateTimePickerDOB.Value = new System.DateTime(2002, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerDOB.Value = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
             // 
             // labelMessage
             // 
@@ -506,7 +506,6 @@
             this.Name = "formStartPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ESOFT";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

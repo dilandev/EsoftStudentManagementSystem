@@ -65,7 +65,6 @@ namespace ESOFT_STMS
         private void formAdminDashboard_Load(object sender, EventArgs e)
         {
         }
-
         private void label12_Click(object sender, EventArgs e)
         {
             formStartPage startpage = new formStartPage();
@@ -85,7 +84,7 @@ namespace ESOFT_STMS
             buttonReset.Visible = true;
             groupBoxTab.Text = "Student Details";
             con = new SqlConnection(DBHelper.getConnectionString());
-            string query = "SELECT StudentId, FirstName, LastName, DOB, Mobile, Gender, Email FROM StudentSignupInfo";
+            string query = "SELECT StudentID, FirstName, Lastname, Mobile, Email, Gender, DOB FROM StudentSignupInfo";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
             DataSet dataSet = new DataSet();
             sda.Fill(dataSet);
@@ -151,19 +150,37 @@ namespace ESOFT_STMS
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            if (radioButtonSearchName.Checked)
+            if (groupBoxTab.Text == "Student Details" && radioButtonSearchName.Checked)
             {
                 con = new SqlConnection(DBHelper.getConnectionString());
-                string query = "SELECT * FROM StudentSignupInfo WHERE FirstName='" + textBoxSearch.Text + "'";
+                string query = "SELECT StudentID, FirstName, Lastname, Mobile, Email, Gender, DOB FROM StudentSignupInfo WHERE FirstName='" + textBoxSearch.Text + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);
                 DataSet dataSet = new DataSet();
                 sda.Fill(dataSet);
                 dataGridViewStudent.DataSource = dataSet.Tables[0];
             }
-            else
+            else if(groupBoxTab.Text == "Student Details" && radioButtonSearchEmail.Checked)
             {
                 con = new SqlConnection(DBHelper.getConnectionString());
-                string query = "SELECT * FROM StudentSignupInfo WHERE FirstName='" + textBoxSearch.Text + "'";
+                string query = "SELECT StudentID, FirstName, Lastname, Mobile, Email, Gender, DOB FROM StudentSignupInfo WHERE Email='" + textBoxSearch.Text + "'";
+                SqlDataAdapter sda = new SqlDataAdapter(query, con);
+                DataSet dataSet = new DataSet();
+                sda.Fill(dataSet);
+                dataGridViewStudent.DataSource = dataSet.Tables[0];
+            }
+            else if (groupBoxTab.Text == "Teacher Details" && radioButtonSearchName.Checked)
+            {
+                con = new SqlConnection(DBHelper.getConnectionString());
+                string query = "SELECT TeacherID, FirstName, Lastname, Mobile, Email, Gender, DOB FROM TeacherSignupInfo WHERE FirstName='" + textBoxSearch.Text + "'";
+                SqlDataAdapter sda = new SqlDataAdapter(query, con);
+                DataSet dataSet = new DataSet();
+                sda.Fill(dataSet);
+                dataGridViewStudent.DataSource = dataSet.Tables[0];
+            }
+            else if (groupBoxTab.Text == "Teacher Details" && radioButtonSearchEmail.Checked)
+            {
+                con = new SqlConnection(DBHelper.getConnectionString());
+                string query = "SELECT TeacherID, FirstName, Lastname, Mobile, Email, Gender, DOB FROM TeacherSignupInfo WHERE Email='" + textBoxSearch.Text + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);
                 DataSet dataSet = new DataSet();
                 sda.Fill(dataSet);
@@ -192,7 +209,7 @@ namespace ESOFT_STMS
             buttonReset.Visible = true;
             groupBoxTab.Text = "Teacher Details";
             con = new SqlConnection(DBHelper.getConnectionString());
-            string query = "SELECT TeacherId, FirstName, LastName, DOB, Mobile, Gender, Email FROM TeacherSignupInfo";
+            string query = "SELECT TeacherID, FirstName, Lastname, Mobile, Email, Gender, DOB FROM TeacherSignupInfo";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
             DataSet dataSet = new DataSet();
             sda.Fill(dataSet);

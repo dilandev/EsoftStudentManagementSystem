@@ -66,20 +66,22 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 185);
+            this.label1.Location = new System.Drawing.Point(11, 148);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(291, 25);
+            this.label1.Size = new System.Drawing.Size(248, 20);
             this.label1.TabIndex = 42;
             this.label1.Text = "Shaping Lives, Creating Futures";
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutUsToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1839, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1635, 28);
             this.menuStrip1.TabIndex = 40;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -90,25 +92,25 @@
             this.ourFacilitiesToolStripMenuItem,
             this.ourAchivementsToolStripMenuItem});
             this.aboutUsToolStripMenuItem.Name = "aboutUsToolStripMenuItem";
-            this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(97, 29);
+            this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.aboutUsToolStripMenuItem.Text = "About us";
             // 
             // aboutEToolStripMenuItem
             // 
             this.aboutEToolStripMenuItem.Name = "aboutEToolStripMenuItem";
-            this.aboutEToolStripMenuItem.Size = new System.Drawing.Size(220, 30);
+            this.aboutEToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
             this.aboutEToolStripMenuItem.Text = "About ESOFT_STMS";
             // 
             // ourFacilitiesToolStripMenuItem
             // 
             this.ourFacilitiesToolStripMenuItem.Name = "ourFacilitiesToolStripMenuItem";
-            this.ourFacilitiesToolStripMenuItem.Size = new System.Drawing.Size(220, 30);
+            this.ourFacilitiesToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
             this.ourFacilitiesToolStripMenuItem.Text = "Our Facilities";
             // 
             // ourAchivementsToolStripMenuItem
             // 
             this.ourAchivementsToolStripMenuItem.Name = "ourAchivementsToolStripMenuItem";
-            this.ourAchivementsToolStripMenuItem.Size = new System.Drawing.Size(220, 30);
+            this.ourAchivementsToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
             this.ourAchivementsToolStripMenuItem.Text = "Our Achivements";
             // 
             // helpToolStripMenuItem
@@ -117,28 +119,28 @@
             this.contactUsToolStripMenuItem,
             this.fAQToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(61, 29);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // contactUsToolStripMenuItem
             // 
             this.contactUsToolStripMenuItem.Name = "contactUsToolStripMenuItem";
-            this.contactUsToolStripMenuItem.Size = new System.Drawing.Size(168, 30);
+            this.contactUsToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.contactUsToolStripMenuItem.Text = "Contact us";
             // 
             // fAQToolStripMenuItem
             // 
             this.fAQToolStripMenuItem.Name = "fAQToolStripMenuItem";
-            this.fAQToolStripMenuItem.Size = new System.Drawing.Size(168, 30);
+            this.fAQToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.fAQToolStripMenuItem.Text = "FAQ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Rockwell", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(37, 156);
+            this.label4.Location = new System.Drawing.Point(33, 125);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(172, 46);
+            this.label4.Size = new System.Drawing.Size(146, 38);
             this.label4.TabIndex = 40;
             this.label4.Text = "Courses";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -147,9 +149,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Rockwell", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(37, 91);
+            this.label2.Location = new System.Drawing.Point(33, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(239, 46);
+            this.label2.Size = new System.Drawing.Size(202, 38);
             this.label2.TabIndex = 38;
             this.label2.Text = "My Account";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -162,9 +164,11 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox2.Location = new System.Drawing.Point(17, 255);
+            this.groupBox2.Location = new System.Drawing.Point(15, 204);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(509, 664);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(452, 531);
             this.groupBox2.TabIndex = 45;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Menu";
@@ -173,9 +177,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Rockwell", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(37, 225);
+            this.label5.Location = new System.Drawing.Point(33, 180);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(296, 46);
+            this.label5.Size = new System.Drawing.Size(250, 38);
             this.label5.TabIndex = 41;
             this.label5.Text = "Student Details";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -184,9 +188,9 @@
             // 
             this.labelStudentEmail.AutoSize = true;
             this.labelStudentEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStudentEmail.Location = new System.Drawing.Point(1433, 60);
+            this.labelStudentEmail.Location = new System.Drawing.Point(1274, 48);
             this.labelStudentEmail.Name = "labelStudentEmail";
-            this.labelStudentEmail.Size = new System.Drawing.Size(135, 36);
+            this.labelStudentEmail.Size = new System.Drawing.Size(116, 29);
             this.labelStudentEmail.TabIndex = 44;
             this.labelStudentEmail.Text = "Message";
             // 
@@ -194,9 +198,9 @@
             // 
             this.labelMessage.AutoSize = true;
             this.labelMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMessage.Location = new System.Drawing.Point(557, 60);
+            this.labelMessage.Location = new System.Drawing.Point(495, 48);
             this.labelMessage.Name = "labelMessage";
-            this.labelMessage.Size = new System.Drawing.Size(135, 36);
+            this.labelMessage.Size = new System.Drawing.Size(116, 29);
             this.labelMessage.TabIndex = 43;
             this.labelMessage.Text = "Message";
             // 
@@ -205,9 +209,9 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label12.Location = new System.Drawing.Point(1434, 114);
+            this.label12.Location = new System.Drawing.Point(1275, 91);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(101, 29);
+            this.label12.Size = new System.Drawing.Size(84, 25);
             this.label12.TabIndex = 39;
             this.label12.Text = "Sign out";
             this.label12.Click += new System.EventHandler(this.label12_Click);
@@ -217,10 +221,11 @@
             this.listBoxDetails.BackColor = System.Drawing.SystemColors.ControlLight;
             this.listBoxDetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBoxDetails.FormattingEnabled = true;
-            this.listBoxDetails.ItemHeight = 36;
-            this.listBoxDetails.Location = new System.Drawing.Point(64, 66);
+            this.listBoxDetails.ItemHeight = 29;
+            this.listBoxDetails.Location = new System.Drawing.Point(57, 53);
+            this.listBoxDetails.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBoxDetails.Name = "listBoxDetails";
-            this.listBoxDetails.Size = new System.Drawing.Size(1144, 540);
+            this.listBoxDetails.Size = new System.Drawing.Size(1017, 406);
             this.listBoxDetails.TabIndex = 0;
             this.listBoxDetails.SelectedIndexChanged += new System.EventHandler(this.listBoxDetails_SelectedIndexChanged);
             // 
@@ -236,9 +241,11 @@
             this.groupBoxTab.Controls.Add(this.textBoxSearch);
             this.groupBoxTab.Controls.Add(this.listBoxDetails);
             this.groupBoxTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxTab.Location = new System.Drawing.Point(563, 255);
+            this.groupBoxTab.Location = new System.Drawing.Point(500, 204);
+            this.groupBoxTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxTab.Name = "groupBoxTab";
-            this.groupBoxTab.Size = new System.Drawing.Size(1264, 664);
+            this.groupBoxTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBoxTab.Size = new System.Drawing.Size(1124, 531);
             this.groupBoxTab.TabIndex = 38;
             this.groupBoxTab.TabStop = false;
             this.groupBoxTab.Text = "Courses";
@@ -247,9 +254,10 @@
             // 
             this.radioButtonSearchEmail.AutoSize = true;
             this.radioButtonSearchEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonSearchEmail.Location = new System.Drawing.Point(851, 71);
+            this.radioButtonSearchEmail.Location = new System.Drawing.Point(756, 57);
+            this.radioButtonSearchEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonSearchEmail.Name = "radioButtonSearchEmail";
-            this.radioButtonSearchEmail.Size = new System.Drawing.Size(93, 30);
+            this.radioButtonSearchEmail.Size = new System.Drawing.Size(78, 28);
             this.radioButtonSearchEmail.TabIndex = 48;
             this.radioButtonSearchEmail.Text = "Email";
             this.radioButtonSearchEmail.UseVisualStyleBackColor = true;
@@ -259,9 +267,10 @@
             this.radioButtonSearchName.AutoSize = true;
             this.radioButtonSearchName.Checked = true;
             this.radioButtonSearchName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonSearchName.Location = new System.Drawing.Point(672, 71);
+            this.radioButtonSearchName.Location = new System.Drawing.Point(597, 57);
+            this.radioButtonSearchName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonSearchName.Name = "radioButtonSearchName";
-            this.radioButtonSearchName.Size = new System.Drawing.Size(144, 30);
+            this.radioButtonSearchName.Size = new System.Drawing.Size(122, 28);
             this.radioButtonSearchName.TabIndex = 47;
             this.radioButtonSearchName.TabStop = true;
             this.radioButtonSearchName.Text = "First Name";
@@ -271,18 +280,19 @@
             // 
             this.labelSearchby.AutoSize = true;
             this.labelSearchby.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSearchby.Location = new System.Drawing.Point(522, 71);
+            this.labelSearchby.Location = new System.Drawing.Point(464, 57);
             this.labelSearchby.Name = "labelSearchby";
-            this.labelSearchby.Size = new System.Drawing.Size(122, 26);
+            this.labelSearchby.Size = new System.Drawing.Size(105, 24);
             this.labelSearchby.TabIndex = 46;
             this.labelSearchby.Text = "Search by :";
             // 
             // buttonReset
             // 
             this.buttonReset.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.buttonReset.Location = new System.Drawing.Point(1029, 612);
+            this.buttonReset.Location = new System.Drawing.Point(915, 490);
+            this.buttonReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonReset.Name = "buttonReset";
-            this.buttonReset.Size = new System.Drawing.Size(205, 46);
+            this.buttonReset.Size = new System.Drawing.Size(182, 37);
             this.buttonReset.TabIndex = 5;
             this.buttonReset.Text = "Reset";
             this.buttonReset.UseVisualStyleBackColor = false;
@@ -291,20 +301,23 @@
             // dataGridViewStudent
             // 
             this.dataGridViewStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewStudent.Location = new System.Drawing.Point(64, 127);
+            this.dataGridViewStudent.Location = new System.Drawing.Point(57, 102);
+            this.dataGridViewStudent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewStudent.Name = "dataGridViewStudent";
             this.dataGridViewStudent.ReadOnly = true;
+            this.dataGridViewStudent.RowHeadersWidth = 51;
             this.dataGridViewStudent.RowTemplate.Height = 28;
             this.dataGridViewStudent.ShowEditingIcon = false;
-            this.dataGridViewStudent.Size = new System.Drawing.Size(1170, 479);
+            this.dataGridViewStudent.Size = new System.Drawing.Size(1040, 383);
             this.dataGridViewStudent.TabIndex = 4;
             // 
             // buttonSearch
             // 
             this.buttonSearch.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.buttonSearch.Location = new System.Drawing.Point(1029, 15);
+            this.buttonSearch.Location = new System.Drawing.Point(915, 12);
+            this.buttonSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(205, 46);
+            this.buttonSearch.Size = new System.Drawing.Size(182, 37);
             this.buttonSearch.TabIndex = 3;
             this.buttonSearch.Text = "Search";
             this.buttonSearch.UseVisualStyleBackColor = false;
@@ -313,26 +326,28 @@
             // textBoxSearch
             // 
             this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSearch.Location = new System.Drawing.Point(527, 14);
+            this.textBoxSearch.Location = new System.Drawing.Point(468, 11);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(478, 46);
+            this.textBoxSearch.Size = new System.Drawing.Size(425, 40);
             this.textBoxSearch.TabIndex = 2;
             // 
             // pbLogo
             // 
             this.pbLogo.Image = global::ESOFT_STMS.Properties.Resources.Logo;
-            this.pbLogo.Location = new System.Drawing.Point(12, 60);
+            this.pbLogo.Location = new System.Drawing.Point(11, 48);
+            this.pbLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(335, 122);
+            this.pbLogo.Size = new System.Drawing.Size(298, 98);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 41;
             this.pbLogo.TabStop = false;
             // 
             // formTeacherDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1839, 925);
+            this.ClientSize = new System.Drawing.Size(1635, 740);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox2);
@@ -343,10 +358,10 @@
             this.Controls.Add(this.groupBoxTab);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "formTeacherDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.formTeacherDashboard_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

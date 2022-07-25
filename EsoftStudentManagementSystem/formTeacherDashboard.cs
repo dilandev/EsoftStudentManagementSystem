@@ -94,7 +94,7 @@ namespace ESOFT_STMS
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
-            con = new SqlConnection(@"Data Source=DILAN-PC;Initial Catalog=ESOFTDB;Integrated Security=True");
+            con = new SqlConnection(DBHelper.getConnectionString());
             string query = "SELECT StudentID, FirstName, LastName, DOB, Mobile, Gender, Email FROM StudentSignupInfo";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
             DataSet dataSet = new DataSet();
@@ -153,8 +153,8 @@ namespace ESOFT_STMS
         {
             if (radioButtonSearchName.Checked)
             {
-                con = new SqlConnection(@"Data Source=DILAN-PC;Initial Catalog=ESOFTDB;Integrated Security=True");
-                string query = "SELECT * FROM StudentSignupInfo WHERE FirstName='" + textBoxSearch.Text + "'";
+                con = new SqlConnection(DBHelper.getConnectionString());
+                string query = "SELECT StudentID, FirstName, Lastname, Mobile, Email, Gender, DOB FROM StudentSignupInfo WHERE FirstName='" + textBoxSearch.Text + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);
                 DataSet dataSet = new DataSet();
                 sda.Fill(dataSet);
@@ -162,8 +162,8 @@ namespace ESOFT_STMS
             }
             else {
 
-                con = new SqlConnection(@"Data Source=DILAN-PC;Initial Catalog=ESOFTDB;Integrated Security=True");
-                string query = "SELECT * FROM StudentSignupInfo WHERE FirstName='" + textBoxSearch.Text + "'";
+                con = new SqlConnection(DBHelper.getConnectionString());
+                string query = "SELECT StudentID, FirstName, Lastname, Mobile, Email, Gender, DOB FROM StudentSignupInfo WHERE Email='" + textBoxSearch.Text + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);
                 DataSet dataSet = new DataSet();
                 sda.Fill(dataSet);
