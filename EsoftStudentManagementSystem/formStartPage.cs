@@ -9,35 +9,33 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using ESOFT_STMS.Helper;
 
-namespace Final_Project___ESOFT
+namespace ESOFT_STMS
 {
     public partial class formStartPage : Form
     {
         SqlCommand cmd;
         SqlConnection con;
-        
+
         public formStartPage()
         {
             InitializeComponent();
-            
+
             textBoxPassword.UseSystemPasswordChar = true;
             textBoxRetypePassword.UseSystemPasswordChar = true;
             textBoxPassword.MaxLength = 18;
             textBoxRetypePassword.MaxLength = 18;
             textBoxMobile.MaxLength = 10;
             labelMessage.Visible = false;
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
         }
 
         private void label12_Click(object sender, EventArgs e)
         {
-            
             formLoginPage loginPage = new formLoginPage();
             loginPage.Show();
             this.Hide();
@@ -64,66 +62,54 @@ namespace Final_Project___ESOFT
             }
         }
 
-        
-private void pictureBox2_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
-            int value;
-
             if (textBoxFirstName.TextLength < 3 || textBoxLastName.TextLength < 3)
             {
                 labelMessage.Text = "Enter your name correctly";
                 labelMessage.ForeColor = Color.Red;
                 labelMessage.Visible = true;
-
             }
             else if (textBoxMobile.TextLength < 10)
             {
-
                 labelMessage.Text = "Enter your contact number correctly";
                 labelMessage.ForeColor = Color.Red;
                 labelMessage.Visible = true;
-
             }
             else if (textBoxMobile.Text.Substring(0, 1).Contains("0") == false)
             {
-              
-                    labelMessage.Text = "Enter your contact number correctly";
-                    labelMessage.ForeColor = Color.Red;
-                    labelMessage.Visible = true;
-                
-            }else if(textBoxEmail.TextLength<10 || textBoxEmail.Text.Contains("@") == false || textBoxEmail.Text.Contains(".com") == false){
-
+                labelMessage.Text = "Enter your contact number correctly";
+                labelMessage.ForeColor = Color.Red;
+                labelMessage.Visible = true;
+            }
+            else if (textBoxEmail.TextLength < 10 || textBoxEmail.Text.Contains("@") == false || textBoxEmail.Text.Contains(".com") == false)
+            {
                 labelMessage.Text = "Enter your contact email correctly";
                 labelMessage.ForeColor = Color.Red;
                 labelMessage.Visible = true;
             }
-            else if (textBoxPassword.TextLength < 1 || textBoxRetypePassword.TextLength < 1) {
-
+            else if (textBoxPassword.TextLength < 1 || textBoxRetypePassword.TextLength < 1)
+            {
                 labelMessage.Text = "Please choose a password for your account";
                 labelMessage.ForeColor = Color.Red;
                 labelMessage.Visible = true;
-            
             }
             else if (textBoxPassword.TextLength < 4 || textBoxRetypePassword.TextLength < 4)
             {
-
                 labelMessage.Text = "Please choose a strong password";
                 labelMessage.ForeColor = Color.Red;
                 labelMessage.Visible = true;
-
             }
-            else if (textBoxPassword.Text != textBoxRetypePassword.Text) {
-
+            else if (textBoxPassword.Text != textBoxRetypePassword.Text)
+            {
                 labelMessage.Text = "Retype the password correctly";
                 labelMessage.ForeColor = Color.Red;
                 labelMessage.Visible = true;
-
             }
             else
             {
                 try
                 {
-
                     string firstName = textBoxFirstName.Text;
                     string lastName = textBoxLastName.Text;
                     string dateOfBirth = dateTimePickerDOB.Text;
@@ -135,15 +121,15 @@ private void pictureBox2_Click(object sender, EventArgs e)
                     {
                         gender = "Male";
                     }
-                    else 
+                    else
                     {
                         gender = "Female";
                     }
 
                     if (radioButtonStudent.Checked)
                     {
-                        con = new SqlConnection(@"Data Source=DILAN-PC;Initial Catalog=ESOFTDB;Integrated Security=True");
-                        string query = "SELECT * FROM StudentSignupInfo WHERE Email='" + textBoxEmail.Text +"'";
+                        con = new SqlConnection(DBHelper.getConnectionString());
+                        string query = "SELECT * FROM StudentSignupInfo WHERE Email='" + textBoxEmail.Text + "'";
                         SqlDataAdapter sda = new SqlDataAdapter(query, con);
                         DataTable dataTable1 = new DataTable();
                         sda.Fill(dataTable1);
@@ -154,7 +140,8 @@ private void pictureBox2_Click(object sender, EventArgs e)
                             labelMessage.ForeColor = Color.Red;
                             labelMessage.Visible = true;
                         }
-                        else {
+                        else
+                        {
                             con.Open();
                             cmd = new SqlCommand("INSERT INTO StudentSignupInfo (FirstName,LastName,DOB,Mobile,Gender,Email,Password) VALUES('" + firstName + "', '" + lastName + "', '" + dateOfBirth + "', '" + mobileNo + "', '" + gender + "', '" + email + "', '" + password + "')", con);
                             cmd.ExecuteNonQuery();
@@ -164,7 +151,8 @@ private void pictureBox2_Click(object sender, EventArgs e)
                                 loginpage.Show();
                                 this.Hide();
                             }
-                            else {
+                            else
+                            {
                                 textBoxFirstName.ResetText();
                                 textBoxLastName.ResetText();
                                 textBoxEmail.ResetText();
@@ -172,13 +160,12 @@ private void pictureBox2_Click(object sender, EventArgs e)
                                 textBoxRetypePassword.ResetText();
                                 textBoxPassword.ResetText();
                                 dateTimePickerDOB.ResetText();
-                                
                             }
                         }
                     }
                     else if (radioButtonTeacher.Checked)
                     {
-                        con = new SqlConnection(@"Data Source=DILAN-PC;Initial Catalog=ESOFTDB;Integrated Security=True");
+                        con = new SqlConnection(DBHelper.getConnectionString());
                         string query = "SELECT * FROM TeacherSignupInfo WHERE Email='" + textBoxEmail.Text + "'";
                         SqlDataAdapter sda = new SqlDataAdapter(query, con);
                         DataTable dataTable1 = new DataTable();
@@ -210,11 +197,8 @@ private void pictureBox2_Click(object sender, EventArgs e)
                                 textBoxRetypePassword.ResetText();
                                 textBoxPassword.ResetText();
                                 dateTimePickerDOB.ResetText();
-                                
                             }
-
                         }
-
                     }
                     else
                     {
@@ -240,7 +224,7 @@ private void pictureBox2_Click(object sender, EventArgs e)
             char ch = e.KeyChar;
             if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
             {
-            e.Handled = true;
+                e.Handled = true;
             }
         }
 
@@ -261,6 +245,5 @@ private void pictureBox2_Click(object sender, EventArgs e)
                 e.Handled = true;
             }
         }
-
     }
 }

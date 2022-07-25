@@ -8,12 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using ESOFT_STMS.Helper;
 
-namespace Final_Project___ESOFT
+namespace ESOFT_STMS
 {
     public partial class formTeacherDashboard : Form
     {
-
         SqlConnection con;
         
         string id;
@@ -23,7 +23,6 @@ namespace Final_Project___ESOFT
         string mobile;
         string gender;
         string email;
-
 
         public formTeacherDashboard(string teacherId, string teacherFirstName, string teacherLastName, string teacherDOB, string teacherMobile, string teacherGender, string teacherEmail)
         {
@@ -65,10 +64,7 @@ namespace Final_Project___ESOFT
 
         private void formTeacherDashboard_Load(object sender, EventArgs e)
         {
-
         }
-
-       
 
         private void label12_Click(object sender, EventArgs e)
         {
@@ -88,13 +84,12 @@ namespace Final_Project___ESOFT
             radioButtonSearchEmail.Visible = true;
             buttonReset.Visible = true;
             groupBoxTab.Text = "Student Details";
-            con = new SqlConnection(@"Data Source=DILAN-PC;Initial Catalog=ESOFTDB;Integrated Security=True");
+            con = new SqlConnection(DBHelper.getConnectionString());
             string query = "SELECT StudentID, FirstName, LastName, DOB, Mobile, Gender, Email FROM StudentSignupInfo";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
             DataSet dataSet = new DataSet();
             sda.Fill(dataSet);
             dataGridViewStudent.DataSource = dataSet.Tables[0];
-
         }
 
         private void buttonReset_Click(object sender, EventArgs e)
@@ -109,7 +104,6 @@ namespace Final_Project___ESOFT
 
         private void label2_Click(object sender, EventArgs e)
         {
-            
             textBoxSearch.Visible = false;
             buttonSearch.Visible = false;
             dataGridViewStudent.Visible = false;
@@ -127,7 +121,6 @@ namespace Final_Project___ESOFT
             listBoxDetails.Items.Add("Mobile Number  : " + mobile);
             listBoxDetails.Items.Add("Gender         : " + gender);
             listBoxDetails.Items.Add("Email            : " + email);
-
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -154,14 +147,12 @@ namespace Final_Project___ESOFT
             listBoxDetails.Items.Add(course4);
             listBoxDetails.Items.Add(course5);
             listBoxDetails.Items.Add(course6);
-
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             if (radioButtonSearchName.Checked)
             {
-
                 con = new SqlConnection(@"Data Source=DILAN-PC;Initial Catalog=ESOFTDB;Integrated Security=True");
                 string query = "SELECT * FROM StudentSignupInfo WHERE FirstName='" + textBoxSearch.Text + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);
@@ -177,7 +168,6 @@ namespace Final_Project___ESOFT
                 DataSet dataSet = new DataSet();
                 sda.Fill(dataSet);
                 dataGridViewStudent.DataSource = dataSet.Tables[0];
-            
             }
         }
 
@@ -185,10 +175,8 @@ namespace Final_Project___ESOFT
         {
             if (groupBoxTab.Text == "Courses")
             {
-
                 System.Diagnostics.Process.Start("https://www.esoft.lk");
             }
         }
-
     }
 }

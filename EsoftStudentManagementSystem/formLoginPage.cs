@@ -8,12 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using ESOFT_STMS.Helper;
 
-namespace Final_Project___ESOFT
+namespace ESOFT_STMS
 {
     public partial class formLoginPage : Form
     {
-
         SqlConnection con;
 
         public formLoginPage()
@@ -41,7 +41,6 @@ namespace Final_Project___ESOFT
             else
             {
                 textBoxLoginPassword.UseSystemPasswordChar = true;
-               
             }
         }
 
@@ -49,10 +48,9 @@ namespace Final_Project___ESOFT
         {
             try
             {
-
                 if (radioButtonStudent.Checked)
                 {
-                    con = new SqlConnection(@"Data Source=DILAN-PC;Initial Catalog=ESOFTDB;Integrated Security=True");
+                    con = new SqlConnection(DBHelper.getConnectionString());
                     string query = "SELECT * FROM StudentSignupInfo WHERE Email='" + textBoxLoginEmail.Text + "' and Password='" + textBoxLoginPassword.Text + "'";
                     SqlDataAdapter sda = new SqlDataAdapter(query, con);
                     DataTable dataTable1 = new DataTable();
@@ -60,13 +58,11 @@ namespace Final_Project___ESOFT
 
                     if (dataTable1.Rows.Count == 1)
                     {
-
                         con.Open();
                         SqlCommand cmnd = new SqlCommand(query, con);
                         SqlDataReader read = cmnd.ExecuteReader();
                         while (read.Read())
                         {
-
                             string dataStudentID = read[0].ToString();
                             string dataFirstName = read[1].ToString();
                             string dataLastName = read[2].ToString();
@@ -78,15 +74,12 @@ namespace Final_Project___ESOFT
                             formStudentDashboard studentDashboard = new formStudentDashboard(dataStudentID,dataFirstName,dataLastName,dataDOB,dataMobile,dataGender,dataEmail);
                             this.Hide();
                             studentDashboard.Show();
-
                         }
-
                     }
                 }
                 else if (radioButtonTeacher.Checked)
                 {
-
-                    con = new SqlConnection(@"Data Source=DILAN-PC;Initial Catalog=ESOFTDB;Integrated Security=True");
+                    con = new SqlConnection(DBHelper.getConnectionString());
                     string query = "SELECT * FROM TeacherSignupInfo WHERE Email='" + textBoxLoginEmail.Text + "' and Password='" + textBoxLoginPassword.Text + "'";
                     SqlDataAdapter sda = new SqlDataAdapter(query, con);
                     DataTable dataTable1 = new DataTable();
@@ -94,13 +87,11 @@ namespace Final_Project___ESOFT
 
                     if (dataTable1.Rows.Count == 1)
                     {
-
                         con.Open();
                         SqlCommand cmnd = new SqlCommand(query, con);
                         SqlDataReader read = cmnd.ExecuteReader();
                         while (read.Read())
                         {
-
                             string dataTeacherID = read[0].ToString();
                             string dataFirstName = read[1].ToString();
                             string dataLastName = read[2].ToString();
@@ -112,15 +103,12 @@ namespace Final_Project___ESOFT
                             formTeacherDashboard teacherDashboard = new formTeacherDashboard(dataTeacherID, dataFirstName, dataLastName, dataDOB, dataMobile, dataGender, dataEmail);
                             this.Hide();
                             teacherDashboard.Show();
-
                         }
-
                     }
                 }
                 else if (radioButtonAdmin.Checked)
                 {
-
-                    con = new SqlConnection(@"Data Source=DILAN-PC;Initial Catalog=ESOFTDB;Integrated Security=True");
+                    con = new SqlConnection(DBHelper.getConnectionString());
                     string query = "SELECT * FROM AdminInfo WHERE Email='" + textBoxLoginEmail.Text + "' and Password='" + textBoxLoginPassword.Text + "'";
                     SqlDataAdapter sda = new SqlDataAdapter(query, con);
                     DataTable dataTable1 = new DataTable();
@@ -128,13 +116,11 @@ namespace Final_Project___ESOFT
 
                     if (dataTable1.Rows.Count == 1)
                     {
-
                         con.Open();
                         SqlCommand cmnd = new SqlCommand(query, con);
                         SqlDataReader read = cmnd.ExecuteReader();
                         while (read.Read())
                         {
-
                             string dataAdminID = read[0].ToString();
                             string dataFirstName = read[1].ToString();
                             string dataLastName = read[2].ToString();
@@ -146,23 +132,19 @@ namespace Final_Project___ESOFT
                             formAdminDashboard adminDashboard = new formAdminDashboard(dataAdminID, dataFirstName, dataLastName, dataDOB, dataMobile, dataGender, dataEmail);
                             this.Hide();
                             adminDashboard.Show();
-
                         }
                     }
                     else
                     {
-
                         labelMessage.Text = "Incorrect Username or Password";
                         labelMessage.ForeColor = Color.Red;
                         labelMessage.Visible = true;
-
                     }
-                }
-                
+                }                
             }
             catch
             {
-
+                MessageBox.Show("Error Occured!");
             }
             finally {
                 con.Close();

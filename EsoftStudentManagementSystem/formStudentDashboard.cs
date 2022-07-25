@@ -8,19 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Final_Project___ESOFT
+namespace ESOFT_STMS
 {
     public partial class formStudentDashboard : Form
     {
-
         string id;
         string firstName;
         string lastName;
         string dOB;
         string mobile;
         string gender;
-        string email;
-        
+        string email;    
 
         public formStudentDashboard(string studentId, string studentFirstName, string studentLastName, string studentDOB, string studentMobile, string studentGender, string studentEmail)
         {
@@ -47,16 +45,11 @@ namespace Final_Project___ESOFT
             dOB = studentDOB;
             mobile = studentMobile;
             gender = studentGender;
-            email = studentEmail;
-
-            
-            
+            email = studentEmail;      
         }
 
         private void formStudentDashboard_Load(object sender, EventArgs e)
         {
-
-
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -69,7 +62,6 @@ namespace Final_Project___ESOFT
             listBoxDetails.Items.Add("Mobile Number  : " + mobile);
             listBoxDetails.Items.Add("Gender         : " + gender);
             listBoxDetails.Items.Add("Email            : " + email);
-    
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -88,7 +80,6 @@ namespace Final_Project___ESOFT
             listBoxDetails.Items.Add(course4);
             listBoxDetails.Items.Add(course5);
             listBoxDetails.Items.Add(course6);
-
         }
 
         private void listBoxDetails_SelectedIndexChanged(object sender, EventArgs e)
@@ -105,6 +96,5 @@ namespace Final_Project___ESOFT
             startpage.Show();
             this.Hide();
         }
- 
     }
 }

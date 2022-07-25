@@ -1,4 +1,4 @@
-﻿namespace Final_Project___ESOFT
+﻿namespace ESOFT_STMS
 {
     partial class formLoginPage
     {
@@ -65,20 +65,22 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 184);
+            this.label1.Location = new System.Drawing.Point(11, 147);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(291, 25);
+            this.label1.Size = new System.Drawing.Size(248, 20);
             this.label1.TabIndex = 5;
             this.label1.Text = "Shaping Lives, Creating Futures";
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutUsToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1839, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1635, 28);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -89,25 +91,25 @@
             this.ourFacilitiesToolStripMenuItem,
             this.ourAchivementsToolStripMenuItem});
             this.aboutUsToolStripMenuItem.Name = "aboutUsToolStripMenuItem";
-            this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(97, 29);
+            this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.aboutUsToolStripMenuItem.Text = "About us";
             // 
             // aboutEToolStripMenuItem
             // 
             this.aboutEToolStripMenuItem.Name = "aboutEToolStripMenuItem";
-            this.aboutEToolStripMenuItem.Size = new System.Drawing.Size(220, 30);
-            this.aboutEToolStripMenuItem.Text = "About ESOFT";
+            this.aboutEToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
+            this.aboutEToolStripMenuItem.Text = "About ESOFT_STMS";
             // 
             // ourFacilitiesToolStripMenuItem
             // 
             this.ourFacilitiesToolStripMenuItem.Name = "ourFacilitiesToolStripMenuItem";
-            this.ourFacilitiesToolStripMenuItem.Size = new System.Drawing.Size(220, 30);
+            this.ourFacilitiesToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
             this.ourFacilitiesToolStripMenuItem.Text = "Our Facilities";
             // 
             // ourAchivementsToolStripMenuItem
             // 
             this.ourAchivementsToolStripMenuItem.Name = "ourAchivementsToolStripMenuItem";
-            this.ourAchivementsToolStripMenuItem.Size = new System.Drawing.Size(220, 30);
+            this.ourAchivementsToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
             this.ourAchivementsToolStripMenuItem.Text = "Our Achivements";
             // 
             // helpToolStripMenuItem
@@ -116,28 +118,28 @@
             this.contactUsToolStripMenuItem,
             this.fAQToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(61, 29);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // contactUsToolStripMenuItem
             // 
             this.contactUsToolStripMenuItem.Name = "contactUsToolStripMenuItem";
-            this.contactUsToolStripMenuItem.Size = new System.Drawing.Size(168, 30);
+            this.contactUsToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.contactUsToolStripMenuItem.Text = "Contact us";
             // 
             // fAQToolStripMenuItem
             // 
             this.fAQToolStripMenuItem.Name = "fAQToolStripMenuItem";
-            this.fAQToolStripMenuItem.Size = new System.Drawing.Size(168, 30);
+            this.fAQToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.fAQToolStripMenuItem.Text = "FAQ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(603, 112);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(536, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(995, 97);
+            this.label2.Size = new System.Drawing.Size(732, 76);
             this.label2.TabIndex = 7;
             this.label2.Text = "Sign in to your account";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -148,9 +150,11 @@
             this.groupBox1.Controls.Add(this.radioButtonStudent);
             this.groupBox1.Controls.Add(this.radioButtonTeacher);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(900, 270);
+            this.groupBox1.Location = new System.Drawing.Point(800, 216);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(520, 122);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(462, 98);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "I\'m";
@@ -158,9 +162,10 @@
             // radioButtonAdmin
             // 
             this.radioButtonAdmin.AutoSize = true;
-            this.radioButtonAdmin.Location = new System.Drawing.Point(154, 63);
+            this.radioButtonAdmin.Location = new System.Drawing.Point(137, 50);
+            this.radioButtonAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonAdmin.Name = "radioButtonAdmin";
-            this.radioButtonAdmin.Size = new System.Drawing.Size(211, 33);
+            this.radioButtonAdmin.Size = new System.Drawing.Size(174, 29);
             this.radioButtonAdmin.TabIndex = 25;
             this.radioButtonAdmin.Text = "an Administrator";
             this.radioButtonAdmin.UseVisualStyleBackColor = true;
@@ -170,9 +175,10 @@
             this.radioButtonStudent.AutoSize = true;
             this.radioButtonStudent.Checked = true;
             this.radioButtonStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonStudent.Location = new System.Drawing.Point(154, 24);
+            this.radioButtonStudent.Location = new System.Drawing.Point(137, 19);
+            this.radioButtonStudent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonStudent.Name = "radioButtonStudent";
-            this.radioButtonStudent.Size = new System.Drawing.Size(139, 33);
+            this.radioButtonStudent.Size = new System.Drawing.Size(117, 29);
             this.radioButtonStudent.TabIndex = 23;
             this.radioButtonStudent.TabStop = true;
             this.radioButtonStudent.Text = "a Student";
@@ -182,9 +188,10 @@
             // 
             this.radioButtonTeacher.AutoSize = true;
             this.radioButtonTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonTeacher.Location = new System.Drawing.Point(350, 24);
+            this.radioButtonTeacher.Location = new System.Drawing.Point(311, 19);
+            this.radioButtonTeacher.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonTeacher.Name = "radioButtonTeacher";
-            this.radioButtonTeacher.Size = new System.Drawing.Size(147, 33);
+            this.radioButtonTeacher.Size = new System.Drawing.Size(122, 29);
             this.radioButtonTeacher.TabIndex = 24;
             this.radioButtonTeacher.Text = "a Teacher";
             this.radioButtonTeacher.UseVisualStyleBackColor = true;
@@ -193,9 +200,9 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(752, 450);
+            this.label11.Location = new System.Drawing.Point(668, 360);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(86, 29);
+            this.label11.Size = new System.Drawing.Size(71, 25);
             this.label11.TabIndex = 25;
             this.label11.Text = "Email :";
             // 
@@ -203,34 +210,37 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(752, 535);
+            this.label3.Location = new System.Drawing.Point(668, 428);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 29);
+            this.label3.Size = new System.Drawing.Size(109, 25);
             this.label3.TabIndex = 27;
             this.label3.Text = "Password :";
             // 
             // textBoxLoginEmail
             // 
             this.textBoxLoginEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxLoginEmail.Location = new System.Drawing.Point(900, 441);
+            this.textBoxLoginEmail.Location = new System.Drawing.Point(800, 353);
+            this.textBoxLoginEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxLoginEmail.Name = "textBoxLoginEmail";
-            this.textBoxLoginEmail.Size = new System.Drawing.Size(520, 41);
+            this.textBoxLoginEmail.Size = new System.Drawing.Size(463, 36);
             this.textBoxLoginEmail.TabIndex = 28;
             // 
             // textBoxLoginPassword
             // 
             this.textBoxLoginPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxLoginPassword.Location = new System.Drawing.Point(900, 526);
+            this.textBoxLoginPassword.Location = new System.Drawing.Point(800, 421);
+            this.textBoxLoginPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxLoginPassword.Name = "textBoxLoginPassword";
-            this.textBoxLoginPassword.Size = new System.Drawing.Size(520, 41);
+            this.textBoxLoginPassword.Size = new System.Drawing.Size(463, 36);
             this.textBoxLoginPassword.TabIndex = 29;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Final_Project___ESOFT.Properties.Resources.cant_find_full_user_img;
-            this.pictureBox2.Location = new System.Drawing.Point(-15, 273);
+            this.pictureBox2.Image = global::ESOFT_STMS.Properties.Resources.cant_find_full_user_img;
+            this.pictureBox2.Location = new System.Drawing.Point(-13, 218);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(611, 585);
+            this.pictureBox2.Size = new System.Drawing.Size(543, 468);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 31;
             this.pictureBox2.TabStop = false;
@@ -238,9 +248,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(900, 633);
+            this.pictureBox1.Location = new System.Drawing.Point(800, 506);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(520, 141);
+            this.pictureBox1.Size = new System.Drawing.Size(462, 113);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
@@ -248,10 +259,11 @@
             // 
             // pbLogo
             // 
-            this.pbLogo.Image = global::Final_Project___ESOFT.Properties.Resources.Logo;
-            this.pbLogo.Location = new System.Drawing.Point(12, 59);
+            this.pbLogo.Image = global::ESOFT_STMS.Properties.Resources.Logo;
+            this.pbLogo.Location = new System.Drawing.Point(11, 47);
+            this.pbLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(335, 122);
+            this.pbLogo.Size = new System.Drawing.Size(298, 98);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 4;
             this.pbLogo.TabStop = false;
@@ -259,9 +271,10 @@
             // checkBoxShow
             // 
             this.checkBoxShow.AutoSize = true;
-            this.checkBoxShow.Location = new System.Drawing.Point(1345, 579);
+            this.checkBoxShow.Location = new System.Drawing.Point(1196, 463);
+            this.checkBoxShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxShow.Name = "checkBoxShow";
-            this.checkBoxShow.Size = new System.Drawing.Size(75, 24);
+            this.checkBoxShow.Size = new System.Drawing.Size(62, 20);
             this.checkBoxShow.TabIndex = 32;
             this.checkBoxShow.Text = "Show";
             this.checkBoxShow.UseVisualStyleBackColor = true;
@@ -272,9 +285,9 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label13.Location = new System.Drawing.Point(1057, 794);
+            this.label13.Location = new System.Drawing.Point(939, 634);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(79, 25);
+            this.label13.Size = new System.Drawing.Size(65, 20);
             this.label13.TabIndex = 34;
             this.label13.Text = "Sign up";
             this.label13.Click += new System.EventHandler(this.label13_Click);
@@ -283,9 +296,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(895, 794);
+            this.label8.Location = new System.Drawing.Point(796, 635);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(156, 25);
+            this.label8.Size = new System.Drawing.Size(130, 20);
             this.label8.TabIndex = 33;
             this.label8.Text = "New to ESOFT?";
             // 
@@ -293,17 +306,17 @@
             // 
             this.labelMessage.AutoSize = true;
             this.labelMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMessage.Location = new System.Drawing.Point(1450, 745);
+            this.labelMessage.Location = new System.Drawing.Point(1289, 596);
             this.labelMessage.Name = "labelMessage";
-            this.labelMessage.Size = new System.Drawing.Size(112, 29);
+            this.labelMessage.Size = new System.Drawing.Size(93, 25);
             this.labelMessage.TabIndex = 37;
             this.labelMessage.Text = "Message";
             // 
             // formLoginPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1839, 925);
+            this.ClientSize = new System.Drawing.Size(1635, 740);
             this.Controls.Add(this.labelMessage);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label8);
@@ -321,9 +334,10 @@
             this.Controls.Add(this.pbLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "formLoginPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ESOFT - Login";
+            this.Text = "ESOFT_STMS - Login";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

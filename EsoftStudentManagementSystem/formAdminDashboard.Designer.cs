@@ -1,4 +1,4 @@
-﻿namespace Final_Project___ESOFT
+﻿namespace ESOFT_STMS
 {
     partial class formAdminDashboard
     {
@@ -65,7 +65,7 @@
             // 
             // pbLogo
             // 
-            this.pbLogo.Image = global::Final_Project___ESOFT.Properties.Resources.Logo;
+            this.pbLogo.Image = global::ESOFT_STMS.Properties.Resources.Logo;
             this.pbLogo.Location = new System.Drawing.Point(12, 63);
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.Size = new System.Drawing.Size(335, 122);
@@ -282,7 +282,7 @@
             // 
             this.aboutEToolStripMenuItem.Name = "aboutEToolStripMenuItem";
             this.aboutEToolStripMenuItem.Size = new System.Drawing.Size(220, 30);
-            this.aboutEToolStripMenuItem.Text = "About ESOFT";
+            this.aboutEToolStripMenuItem.Text = "About ESOFT_STMS";
             // 
             // aboutUsToolStripMenuItem
             // 
